@@ -7,11 +7,6 @@
   tags: [mariadb-client, always]
 
 - block:
-    - name: Install MySQL python packages
-      package:
-        name: python-mysqldb
-        state: present
-
     - include_tasks: setup-{{ ansible_pkg_mgr }}.yml
 
     - name: Install MariaDB client packages
